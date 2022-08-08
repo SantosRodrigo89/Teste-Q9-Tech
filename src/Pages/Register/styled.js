@@ -9,6 +9,8 @@ export const Main = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  background-color: #e6e5e9 ;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   p {
     font-size: 1rem;
   }
@@ -25,7 +27,7 @@ export const Form = styled.form`
 export const ButtonStyled = styled(Button)`
   && {
     color: #000;
-    background-color: #e8222e;
+    background-color: #ffc501;
     width: 100%;
   }
 `;

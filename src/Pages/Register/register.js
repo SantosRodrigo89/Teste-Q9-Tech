@@ -6,7 +6,7 @@ import { ButtonStyled, Form, InputMaterial, Main } from "./styled";
 import { useNavigate } from "react-router-dom";
 
 const Register = () => {
-  const navigate = useNavigate()
+  const navigate = useNavigate();
 
   const [email, setEmail] = useState("");
 
@@ -20,26 +20,25 @@ const Register = () => {
   };
 
   const emailApi = async (body) => {
-    await axios 
-      .post(`${BASE_URL}/register`, body )
-      .then((res) => {
-        console.log(res);
-        localStorage.setItem("token", res.data.token);
+    await axios
+      .post(`${BASE_URL}/register`, body)
+      .then((response) => {
+        console.log(response);
+        localStorage.setItem("token", response.data.user.token);
         alert("Usuário cadastrado com sucesso!");
-        goToList(navigate)
-      }
-      )
+        goToList(navigate);
+      })
       .catch((error) => {
         console.log(error);
-      }
-      );
-  }
+      });
+  };
 
   return (
-   <Main>
-    <h1> Informe um email para cadastro </h1>
+    <Main>
+      <h1> Doguinhos </h1>
+      <p> Informe um email para acessar! </p>
 
-<Form onSubmit={onSubimitLogin}>
+      <Form onSubmit={onSubimitLogin}>
         <InputMaterial
           id="outlined-basic"
           label="Email"
@@ -52,9 +51,8 @@ const Register = () => {
         />
 
         <ButtonStyled type="submit">Enviar</ButtonStyled>
-        </Form>
-
-   </Main>
+      </Form>
+    </Main>
   );
 };
 export default Register;
