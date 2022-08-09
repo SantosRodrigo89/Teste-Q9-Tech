@@ -16,7 +16,6 @@ export const IconImage = styled.img`
     box-shadow:  0px 0px 4px black;
     padding: 1%; */
     
-
     &:hover {
         opacity: 0.7;
     }
