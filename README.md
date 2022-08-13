@@ -21,7 +21,7 @@ Here are the technologies used in this project.
 
 ## Links
 
-Surge: https://creepy-tank.surge.sh
+Surge: https://thick-winter.surge.sh
 <br/>
 
 ### What works
